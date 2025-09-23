@@ -48,8 +48,13 @@ export default function Home() {
             </li>
           ))}       
         </ul>
+        <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full w-full shadow-sm transition duration-200">
+  Tweet
+</button>
+
           
       </div>
+      
 
       <div className="border-r-[1px] border-l-[1px] border-gray-400 col-span-6 ">Column 2 (2/3)</div>
       <div className="col-span-3">Column 3 (1/3)</div>
