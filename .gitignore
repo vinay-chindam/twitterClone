@@ -1,0 +1,8 @@
+# Ignore node_modules in both frontend and backend
+twitter_client/node_modules/
+twitter_server/node_modules/
+
+# Optional: ignore build artifacts, logs, etc.
+*.log
+.env
+.DS_Store
