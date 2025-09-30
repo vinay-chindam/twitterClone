@@ -1,8 +1,23 @@
-# Ignore node_modules in both frontend and backend
-twitter_client/node_modules/
-twitter_server/node_modules/
+# Node modules
+node_modules/
 
-# Optional: ignore build artifacts, logs, etc.
+# Build output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
 *.log
+
+# Environment variables
 .env
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
 .DS_Store
+Thumbs.db
