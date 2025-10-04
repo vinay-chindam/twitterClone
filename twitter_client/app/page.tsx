@@ -1,3 +1,5 @@
+'use client';
+
 import { FaXTwitter } from "react-icons/fa6";
 import { FaHashtag } from "react-icons/fa6";
 import { FaBell } from "react-icons/fa6";
@@ -89,13 +91,18 @@ export default function Home() {
           <TweetCard />
 
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 flex flex-col items-center justify-center p-6 rounded-2xl shadow-xl animate-fade-in">
+  <div className="w-full max-w-xs bg-white rounded-xl p-6 shadow-md transition-transform hover:scale-105">
+    <h1 className="text-center text-2xl font-bold text-gray-800 mb-4">
+      New to <span className="text-blue-600">Twitter</span>?
+    </h1>
+    <GoogleLogin
+      onSuccess={(cred) => console.log(cred)}
+      onError={() => console.log('Login Failed')}
+    />
+  </div>
+</div>
 
-          <GoogleLogin onSuccess={(cred)=>console.log(cred)}></GoogleLogin>
-
-          
-
-        </div>
       </div>
     </GoogleOAuthProvider>
   );
