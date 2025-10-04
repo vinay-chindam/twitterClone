@@ -1,7 +1,8 @@
 import express from 'express';
 import { ApolloServer } from '@apollo/server';
-import { expressMiddleware } from '@as-integrations/express4';
+import { expressMiddleware } from '@as-integrations/express5';
 import cors from 'cors';
+import { prismaClient } from '../clients/db/index.js';
 const typeDefs = `
   type Query {
     hello: String

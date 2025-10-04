@@ -2,8 +2,9 @@ import express from 'express';
 import type { Express } from 'express';
 
 import { ApolloServer } from '@apollo/server';
-import { expressMiddleware } from '@as-integrations/express4';
+import { expressMiddleware } from '@as-integrations/express5';
 import cors from 'cors';
+import { prismaClient } from '../clients/db/index.js';
 
 
 
@@ -30,6 +31,7 @@ export async function createGraphQLServer(): Promise<Express> {
   // ✅ Use Express's built-in JSON parser
   app.use(express.json());
 
+  
   const server = new ApolloServer({ typeDefs, resolvers });
   await server.start();
 
